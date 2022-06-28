@@ -1,0 +1,8 @@
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
+
+
+.color-box {
+    background-color: #0320fc;
+    border-radius: 10%;
+    color: aqua;
+}

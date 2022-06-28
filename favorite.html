@@ -13,43 +13,50 @@
     <div class="container">
         List of attractions
         <div class="container">
-            <div class="row">
-              <div class="col">
-                <div class="color-box">
-                Text Disneyland
-                Hours of operation
-                <input class="form-check-input mt-0" type="checkbox" value="" aria-label="Checkbox for following text input">
-              </div>
-              </div>
-
-              <div class="col">
-                <div class="color-box">
-                    <input class="form-check-input mt-0" type="checkbox" value="" aria-label="Checkbox for following text input">
-            <p class="text-center fs-2">
-                Text Disneyland
-            </p>
-            <p class="text-center fs-5">
-                Hours of operation
-           </p>
-              </div>
-              </div>
-              <div class="col">
-            
-                  <div class="color-box">
-
-                  
-                Text Disneyland mn
-                Hours of operation
-                <input class="form-check-input mt-0" type="checkbox" value="" aria-label="Checkbox for following text input">
-                  </div>
-       
-            </div>
+            <div class="row row-cols-3" id="attractions">
             </div>
           </div>
       </div>
-      
-    <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js">
+
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"> </script>
+<script>
+        function createFavorite (Name, Hours){
+            main = document.createElement ("div");
+            main.className = "color-box";
+            favoriteButton = document.createElement ("input");
+            favoriteButton.className = "form-check-input mt-0";
+            favoriteButton.type = "checkbox";
+            _name = document.createElement ('p');
+            _name.className = "text-center fs-2";
+            _name.innerHTML = Name;
+            hours = document.createElement ('p');
+            hours.className = "text-center fs-5";
+            hours.innerHTML = Hours;
+            main.appendChild (favoriteButton);
+            main.appendChild (_name);
+            main.appendChild (hours);
+            column = document.createElement ("div");
+            column.className = "col";
+            column.appendChild (main);
+            document.getElementById ("attractions").appendChild (column);
+
+        }
     
+        createFavorite ("favLoop", "9to5");
+        createFavorite ("favLoop", "9to5");
+        createFavorite ("favLoop", "9to5");
+        createFavorite ("favLoop", "9to5");
+        createFavorite ("favLoop", "9to5");
+        createFavorite ("favLoop", "9to5");
+        createFavorite ("favLoop", "9to5");
+        createFavorite ("favLoop", "9to5");
+        createFavorite ("favLoop", "9to5");
+        createFavorite ("favLoop", "9to5");
+        createFavorite ("favLoop", "9to5");
+        createFavorite ("favLoop", "9to5");
+        
+
+
     </script>
   </body>
 </html>

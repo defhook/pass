@@ -90,12 +90,18 @@
 
     <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"> </script>
 <script>
+        function unfavorite (name){
+          console.log ("toast");
+          //use this function to unfavorite favorited parks
+        }
         function createFavorite (Name, Hours){
             main = document.createElement ("div");
             main.className = "color-box";
-            favoriteButton = document.createElement ("input");
-            favoriteButton.className = "form-check-input mt-0";
-            favoriteButton.type = "checkbox";
+            favoriteButton = document.createElement ("img");
+            favoriteButton.className = "clickable";
+            favoriteButton.src = "./assets/images/red-x-icon.png";
+            favoriteButton.style.height = "25px";
+            favoriteButton.onclick = function(){unfavorite(name)};
             _name = document.createElement ('p');
             _name.className = "text-center fs-2";
             _name.innerHTML = Name;

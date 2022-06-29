@@ -10,8 +10,73 @@
     <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
   </head>
   <body>
+
+   <container>
+
+    <nav class="navbar navbar-expand-sm navbar-dark" 
+     style="background-color:black">
+      <!--This href will be linked to your homepage alvin, the actual app name will be the clickable button-->
+      <a 
+      href="#"
+      class ="navbar-brand mb-0 h1">
+      <img 
+      class="d-inline-block align-top"
+      src="./assets/images/PASS-logo.png"
+      width="150"/>
+        PASS
+
+      </a>
+      <button 
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNav"
+      class="navbar-toggler"
+      aria-controls="navbarNav"
+      aria-label="Toggle navigation"
+      >
+      <span class="navbar-toggler icon"></span>
+      </button>
+      <div 
+      class="collapse navbar-collapse" 
+      id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a href="#" class="nav-link">
+            User Login
+          </a>
+        </li>
+        <li class="nav-item active">
+          <a href="#" class="nav-link">
+            Favorites
+          </a>
+        </li>
+        <li class="nav-item active">
+          <a href="#" class="nav-link">
+            Theme Parks
+          </a>
+        </li>
+      </ul>
+      </div>
+    </nav>
+
+   </container>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     <div class="container">
-        List of attractions
+        Favorited Theme Parks
         <div class="container">
             <div class="row row-cols-3" id="attractions">
             </div>

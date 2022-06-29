@@ -1,8 +1,40 @@
 @import "../node_modules/bootstrap/scss/bootstrap.scss";
 
+:root {
+    --red: #ce5428;
+    --blue: #6eaceb;
+    --green: #6eebac;
+    --light: #cefaff;
+    --cream: #ffffff;
+    --purple: #4f468a;
+}
 
 .color-box {
-    background-color: #0320fc;
+    background-color: var(--blue);
     border-radius: 10%;
-    color: aqua;
+    color: var(--light);
 }
+
+#navbar button {
+    background-color: var(--red);
+}
+
+#navbar nav {
+    background-color: var(--purple);
+}
+
+#navbar a{
+
+    color: var(--red);
+
+}
+
+.title {
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    
+    text-align: center;
+    font-weight: bolder;
+    color: #ce5428;
+    font-size: 35px;
+}
+

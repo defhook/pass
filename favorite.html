@@ -11,10 +11,9 @@
   </head>
   <body>
 
-   <container>
+   <container id="navbar">
 
-    <nav class="navbar navbar-expand-sm navbar-dark" 
-     style="background-color:black">
+    <nav class="navbar navbar-expand-sm navbar-dark" >
       <!--This href will be linked to your homepage alvin, the actual app name will be the clickable button-->
       <a 
       href="#"
@@ -57,8 +56,14 @@
         </li>
       </ul>
       </div>
+<form class="d-flex">
+      <input type="text" class="form-control me-2">
+      <button type="submit" class="btn btn-primary">
+        Search 
+      </button>
     </nav>
-
+    
+    </form>
    </container>
 
 
@@ -76,7 +81,7 @@
 
 
     <div class="container">
-        Favorited Theme Parks
+        <p class="title">Favorite Theme Parks</p>
         <div class="container">
             <div class="row row-cols-3" id="attractions">
             </div>

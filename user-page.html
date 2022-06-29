@@ -83,7 +83,8 @@
                     
                     </p>
                     <div class="user-text">
-                    <button type="button" class="btn btn-primary">
+                        
+                    <button onClick="updateInfo()" type="button" class="btn btn-primary">
                         Change/Update info
                     </button>
                 </div>
@@ -102,19 +103,13 @@
         </form>
        </container>
     
-    
-
-        
-    
-
-
-
-
-
-    <h1></h1>
+     <h1></h1>
     <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
     <script>
 
+        function updateInfo (){
+            //this function is called when the update info button is pressed. The idea is to give the user the ability to update email, password and profile image. The profile image is a placeholder from the assets folder.
+        }
         //This function will populate the saved user info into the user hub-
 
         function userInfo (email, password){

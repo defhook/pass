@@ -88,6 +88,14 @@
                     </button>
                 </div>
                 </div>
+                <div class="col">
+                    <p class="fs-4 pop" id="email">
+                
+                    </p>
+                    <p class="fs-4 pop" id="password">
+                
+                    </p>
+                </div>
             </div>
        
 
@@ -105,5 +113,16 @@
 
     <h1></h1>
     <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script>
+
+        //This function will populate the saved user info into the user hub-
+
+        function userInfo (email, password){
+            document.getElementById("email").innerHTML=email;
+            document.getElementById("password").innerHTML=password;
+        }
+        //replace both placeholders with actual info, has been tested and ran prior to push
+        userInfo ("placeholder@email.com", "placeholder");
+    </script>
   </body>
 </html>

@@ -10,8 +10,9 @@ const typeDefs = gql`
     }
 
     type Park {
-        bookId: String
+        id: String
         name: String
+        timezone: String
     }
 
     type Auth {
@@ -20,8 +21,9 @@ const typeDefs = gql`
     }
 
     input ParkData {
-        parkId: String
+        id: String
         name: String
+        timezone: String
     }
 
     type Query {
@@ -30,7 +32,7 @@ const typeDefs = gql`
 
     type Mutation {
         savePark(input: ParkData!): User
-        removePark(parkId: String!): User
+        removePark(id: String!): User
     }
 `;
 

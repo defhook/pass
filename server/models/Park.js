@@ -1,7 +1,7 @@
 const { Schema } = require('mongoose');
 
 const parkSchema = new Schema({
-  id: {
+  parkId: {
     type: String,
     required: true,
   },
@@ -9,7 +9,7 @@ const parkSchema = new Schema({
     type: String,
     required: true,
   },
-  timezone: {
+  status: {
     type: String,
     required: true,
   }

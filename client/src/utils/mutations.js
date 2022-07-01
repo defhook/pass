@@ -8,25 +8,25 @@ export const SAVE_PARK = gql`
             email
             parkCount
             savedParks {
-                id
+                parkId
                 name
-                timezone
+                status
             }
         }
     }
 `
 
 export const REMOVE_PARK = gql`
-    mutation removePark($id: String!) {
-        removePark(id: $id) {
+    mutation removePark($parkId: String!) {
+        removePark(parkId: $parkId) {
             _id
             username
             email
             parkCount
             savedParks {
-                id
+                parkId
                 name
-                timezone
+                status
             }
         }
     }

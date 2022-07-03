@@ -1,5 +1,5 @@
 import React from "react";
-import coverImage from "../../assets/main/abstractmap.jpg";
+import coverImage from "../../assets/main/polygonmap.jpg";
 import { Container, Row, Col } from "react-bootstrap";
 
 function About() {
@@ -20,7 +20,7 @@ function About() {
           </Col>
           <Col>
           <div className="my-2">
-            <p>
+            <p class="aboutMe">
               We're thrill seekers that are focused on getting the most of our
               adrenaline rush! In 2022, a group of friends decided to create an
               easy and simple way of viewing wait times for theme parks. We are

@@ -39,7 +39,7 @@
 .neonText{
   font-family: 'Pacifico', cursive;
   animation: flicker 1.5s infinite alternate;
-  color: white;
+  color: red;
   text-align: center;
   font-size: 5.0rem;
 }
@@ -78,8 +78,15 @@
 
 .navigation {
   background-color: #4f468a;
-
   color: #ce5428; 
+}
+
+.aboutMe{
+  font-family: 'Pacifico', cursive;
+  animation: flicker 1.5s infinite alternate;
+  color: red;
+  text-align: center;
+  font-size: 1.9rem;
 }
 
 

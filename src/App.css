@@ -1,10 +1,9 @@
-.App {
-  text-align: center;
-}
+
 
 .App-logo {
-  height: 40vmin;
+  height: 16vmin;
   pointer-events: none;
+  margin-left: 0px; 
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -38,8 +37,11 @@
 }
 
 .neonText{
+  font-family: 'Pacifico', cursive;
   animation: flicker 1.5s infinite alternate;
-  color: aqua;
+  color: white;
+  text-align: center;
+  font-size: 5.0rem;
 }
 
 .neonSize {
@@ -47,6 +49,13 @@
  animation: flicker 1.5s infite alternative
 }
 
+.about-me {
+  background-color: #6eaceb; 
+}
+
+#root {
+  background-color: #6eaceb; 
+}
 
 @keyframes flicker {
   0%, 18%, 22%, 25%, 53%, 57%, 100% {
@@ -60,6 +69,17 @@
     0 0 100px #0fa,
     0 0 150px #0fa;
   }
+}
+
+.login-btn{
+  background-color: #ce5428; 
+  color: #ffffff;
+}
+
+.navigation {
+  background-color: #4f468a;
+
+  color: #ce5428; 
 }
 
 

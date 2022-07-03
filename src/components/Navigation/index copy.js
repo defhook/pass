@@ -4,22 +4,36 @@ import { Form, Nav, Button, Container, Row, Col } from "react-bootstrap";
 function Navigation() {
   return (
     <header className="flex-row px-1">
-      <Nav className="navigation">
     
-          <Row className="p-3">
-            <Col xs="2">
-              <a data-testid="link" href="https://github.com/defhook/pass">
-                <span role="img" aria-label="ticket">
-                  {" "}
-                  <img
-                    src={require(`../../assets/main/PASS-logo-copy.png`)}
-                    alt="github"
-                    className="App-logo"
-                  />
-                </span>{" "}
-              </a>
-            </Col>
-            <Col xs="3">
+          <a data-testid="link" href="https://github.com/defhook/pass">
+            <span role="img" aria-label="ticket">
+              {" "}
+              <img
+                src={require(`../../assets/main/PASS-logo-copy.png`)}
+                alt="github"
+                className="App-logo"
+              />
+            </span>{" "}
+          </a>       
+
+      {/* <Container Fluid>
+                <h1 class="neonText">Pass!</h1>
+              </Container> */}
+      {/* <a 
+      href="https://github.com/defhook/pass"
+      rel="noreferrer"
+      target="_blank"
+      >
+        <img src={require(`../../assets/main/PASS-logo-copy.png`)}
+        alt="github"
+        width="50"
+        height="50"
+        />
+      </a> */}
+      <Nav>
+        <div className="Nav">
+          <Row>
+            <Col xs="4">
               <Form>
                 <Container>
                   <Form.Group controlId="formEmail">
@@ -33,7 +47,7 @@ function Navigation() {
                 </Container>
               </Form>
             </Col>
-            <Col xs="3">
+            <Col>
               <Form>
                 <Container>
                   <Form.Group controlId="formPassword">
@@ -41,19 +55,16 @@ function Navigation() {
                     <Form.Control type="Password" placeholder="Password" />
                     <Form.Text className="text-muted" />
                   </Form.Group>
+                  <Col xs="4">
+                    <Button variant="primary" type="submit">
+                      Log In
+                    </Button>
+                  </Col>
                 </Container>
               </Form>
             </Col>
-            <Col xs="4">
-              <Button  variant="danger m-2 p-2"  type="submit">
-                Log In
-              </Button>
-              <Button variant="success m-2 p-2" type="submit">
-                Create Account
-              </Button>
-            </Col>
           </Row>
-
+        </div>
       </Nav>
     </header>
   );

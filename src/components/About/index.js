@@ -4,8 +4,11 @@ import { Container, Row, Col } from "react-bootstrap";
 
 function About() {
   return (
-    <section className="my-5">
+    <section className="my-5 about-me">
       <Container Fluid>
+        <Row>
+        <h1 class="neonText">Pass</h1>
+        </Row>
         <Row>
           <Col sm={8}>
           <img
@@ -18,7 +21,7 @@ function About() {
           <Col>
           <div className="my-2">
             <p>
-              We are thrill seekers that are focused on getting the most of our
+              We're thrill seekers that are focused on getting the most of our
               adrenaline rush! In 2022, a group of friends decided to create an
               easy and simple way of viewing wait times for theme parks. We are
               a small group that updates this site. If you have any questions

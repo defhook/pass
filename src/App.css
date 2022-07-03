@@ -37,20 +37,44 @@
   }
 }
 
-backdrop-filter: blur(20px)
-
-/* h1 {
-  font-family: 'Pacifico', cursive;
+.neonText{
+  animation: flicker 1.5s infinite alternate;
   color: aqua;
+}
+
+.neonSize {
+ font-size: 9.0rem;
+ animation: flicker 1.5s infite alternative
+}
+
+
+@keyframes flicker {
+  0%, 18%, 22%, 25%, 53%, 57%, 100% {
+    text-shadow:
+    0 0 4px #fff,
+    0 0 11px #fff,
+    0 0 19px #fff,
+    0 0 40px #0fa,
+    0 0 80px #0fa,
+    0 0 90px #0fa,
+    0 0 100px #0fa,
+    0 0 150px #0fa;
+  }
+}
+
+
+/* .neonText {
+  font-family: 'Pacifico', cursive;
+  color: white;
   animation: neon 5s infinite;
 }
 
 @keyframes neon {
   0%, 39%, 41%, 59%, 61%, 100% {
     text-shadow:
-    aqua 0 0 12px,
-    red 0 0 24px,
-    red 0 0 36px,
+    white 0 0 12px,
+    black 0 0 24px,
+    black 0 0 36px,
   }
   40%, 60% {
     text-shadow: none;

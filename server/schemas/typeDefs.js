@@ -5,14 +5,16 @@ const typeDefs = gql`
         _id: ID!
         username: String
         email: String
-        parkCount: Int
-        savedParks: [Park]
+        attractionCount: Int
+        savedAttractions: [Attraction]
     }
 
-    type Park {
-        parkId: String
+    type Attraction {
+        attractionId: String
         name: String
+        type: String
         status: String
+        waitTime: Int
     }
 
     type Auth {
@@ -20,10 +22,12 @@ const typeDefs = gql`
         user: User
     }
 
-    input ParkData {
-        parkId: String
+    input AttractionData {
+        attractionId: String
         name: String
+        type: String
         status: String
+        waitTime: Int
     }
 
     type Query {
@@ -31,8 +35,8 @@ const typeDefs = gql`
     }
 
     type Mutation {
-        savePark(input: ParkData!): User
-        removePark(parkId: String!): User
+        saveAttraction(input: AttractionData!): User
+        removeAttraction(parkId: String!): User
     }
 `;
 

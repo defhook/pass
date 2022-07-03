@@ -19,7 +19,7 @@ const userSchema = new Schema(
       type: String,
       required: true,
     },
-    savedParks: [parkSchema],
+    savedAttractions: [parkSchema],
   },
   {
     toJSON: {
@@ -29,8 +29,8 @@ const userSchema = new Schema(
 );
 
 
-userSchema.virtual('parkCount').get(function () {
-  return this.savedBooks.length;
+userSchema.virtual('attractionCount').get(function () {
+  return this.savedAttractions.length;
 });
 
 const User = model('User', userSchema);

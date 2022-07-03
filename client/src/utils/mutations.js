@@ -1,32 +1,37 @@
 import { gql } from '@apollo/client';
 
-export const SAVE_PARK = gql`
-    mutation savePark($input: ParkData!) {
-        savePark(input: $input) {
+export const SAVE_ATTRACTION = gql`
+    mutation saveAttraction($input: AttractionData!) {
+        saveAttraction(input: $input) {
             _id
             username
             email
-            parkCount
-            savedParks {
-                parkId
+            attractionCount
+            savedAttractions {
+                attractionId
                 name
+                type
                 status
+                waitTime
             }
         }
     }
 `
 
-export const REMOVE_PARK = gql`
-    mutation removePark($parkId: String!) {
-        removePark(parkId: $parkId) {
+export const REMOVE_ATTRACTION = gql`
+    mutation removeAttraction($attractionId: String!) {
+        removeAttraction(attractionId: $attractionId) {
             _id
             username
             email
-            parkCount
-            savedParks {
-                parkId
+            attractionCount
+            savedAttractions {
+                attractionId
                 name
+                type
                 status
+                waitTime
+                
             }
         }
     }

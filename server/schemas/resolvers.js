@@ -8,7 +8,7 @@ const resolvers = {
             if (context.user) {
                 const userData = await User.findOne({ _id: context.user._id })
                 .select('-__v -password')
-                .populate('savedParks')
+                .populate('savedAttractions')
 
             return userData
             }
@@ -18,11 +18,11 @@ const resolvers = {
     },
 
     Mutation: {
-        savePark: async (parent, args, context) => {
+        saveAttraction: async (parent, args, context) => {
             if (context.user) {
                 const updateUser = await User.findOneAndUpdate(
                 { _id: context.user._id},
-                { $addToSet: { savedParks: args.input }},
+                { $addToSet: { savedAttractions: args.input }},
                 { new: true }
                 )
                 return updateUser;
@@ -30,11 +30,11 @@ const resolvers = {
 
             throw new AuthenticationError('You need to be logged in!')
         },
-        removePark: async (parent, args, context) => {
+        removeAttraction: async (parent, args, context) => {
             if (context.user) {
                 const deletedPark = await User.findOneAndUpdate(
                     { _id: context.user._id },
-                    { $pull: { savedParks: {parkId: args.parkId} }},
+                    { $pull: { savedAttractions: {attractionId: args.attractionId} }},
                     { new: true }
                 )
 

@@ -10,10 +10,11 @@
 }
 
 .user-box {
-    background-color: var(--blue);
+    background-color: var(--green);
     border-radius:0%;
     color: var(--light);
     margin-top: 20px;
+    font-size: 28px;
 }
 
 .user-image {
@@ -28,6 +29,10 @@
  font-style: italic;
  }
 
+ .new-line {
+     white-space: pre-wrap;
+     padding: 15px;
+ }
 
 .color-box {
     background-color: var(--blue);
@@ -66,7 +71,14 @@
     font-size: 35px;
 }
 
-.blue-box {
+.button-color {
+    width: 200px;
+    height: 25px;
+ background-color: #ce5428;
+ color: white;
+}
+
+.blueBackground {
     background-color: #6eaceb;
-    height: 250px;
+    height: 700px;
 }

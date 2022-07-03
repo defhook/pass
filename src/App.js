@@ -2,7 +2,7 @@ import "./App.css";
 import Navbar from "./components/Navbar";
 import {BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Favorites from "./pages/favorites";
-//import User from "./pages/user";
+import User from "./pages/user";
 import HomePage from "./pages/home";
 
 function App() {
@@ -12,7 +12,7 @@ function App() {
       <Routes>
        <Route path="/" exact element={<HomePage/>} />
        <Route path="/favorites" exact element={<Favorites/>} />
-  
+       <Route path="/user" exact element={<User/>} />
      </Routes>
     </Router>
   );

@@ -31,6 +31,9 @@ const Navbar = () => {
           <NavLink to="/favorites" style>
             Favorites
           </NavLink>
+          <NavLink to="/user" style>
+            User
+          </NavLink>
           
         </NavMenu>
         <input type="text" placeholder="Search..."></input>

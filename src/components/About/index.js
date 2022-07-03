@@ -22,8 +22,8 @@ function About() {
           <div className="my-2">
             <p class="aboutMe">
               We're thrill seekers that are focused on getting the most of our
-              adrenaline rush! In 2022, a group of friends decided to create an
-              easy and simple way of viewing wait times for theme parks. We are
+              adrenaline rush! In 2022, we decided to create an
+              easy and simple way of viewing wait times for theme parks. We're
               a small group that updates this site. If you have any questions
               feel free to reach out.
             </p>

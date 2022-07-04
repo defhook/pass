@@ -46,7 +46,7 @@
 
 .neonSize {
  font-size: 9.0rem;
- animation: flicker 1.5s infite alternative
+ animation: flicker 5s infite alternative
 }
 
 .about-me {
@@ -86,11 +86,12 @@
 
 .aboutMe{
   font-family: 'Pacifico', cursive;
-  animation: flicker 1.5s infinite alternate;
+  /* animation: flicker 1.5s infinite alternate; */
   color: red;
   text-align: center;
   font-size: 1.9rem;
 }
+
 
 
 

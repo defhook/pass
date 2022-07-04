@@ -64,5 +64,6 @@ function unfavorite (name){
 	//use this function to unfavorite favorited parks  <----------------------
   }
 
+  
 export default Favorites;
 

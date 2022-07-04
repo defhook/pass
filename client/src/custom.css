@@ -1,0 +1,84 @@
+/*@import "../node_modules/bootstrap/scss/bootstrap.scss";
+*/
+:root {
+    --red: #ce5428;
+    --blue: #6eaceb;
+    --green: #6eebac;
+    --light: #cefaff;
+    --cream: #ffffff;
+    --purple: #4f468a;
+}
+
+.user-box {
+    background-color: var(--green);
+    border-radius:0%;
+    color: var(--light);
+    margin-top: 20px;
+    font-size: 28px;
+}
+
+.user-image {
+    margin: 5%;
+}
+
+.user-text {
+    padding-left: 250px;
+}
+
+ .pop {
+ font-style: italic;
+ }
+
+ .new-line {
+     white-space: pre-wrap;
+     padding: 15px;
+ }
+
+.color-box {
+    background-color: var(--blue);
+    border-radius: 10%;
+    color: var(--light);
+}
+
+#navbar button {
+    background-color: var(--red);
+}
+
+#navbar nav {
+    background-color: var(--purple);
+}
+
+#navbar a{
+
+    color: var(--red);
+
+}
+
+.searchBar {
+    margin-right: 10%;
+}
+
+.clickable {
+    cursor: pointer;
+}
+
+.title {
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+    text-align: center;
+    font-weight: bolder;
+    color: #ce5428;
+    font-size: 35px;
+}
+
+.button-color {
+    width: 200px;
+    height: 25px;
+ background-color: #ce5428;
+ color: white;
+}
+
+.blueBackground {
+    background-color: #6eaceb;
+    height: 700px;
+}

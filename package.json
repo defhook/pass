@@ -1,8 +1,14 @@
 {
-  "name": "pass-project3",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "name": "pass",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "concurrently": "^7.2.2"
+
+  },
+  "overrides": {
+    "autoprefixer": "10.4.5"
+  },
   "scripts": {
     "develop" : "concurrently \"cd server && npm run watch\" \"cd client && npm start\"",
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -18,7 +24,6 @@
     "url": "https://github.com/defhook/pass/issues"
   },
   "homepage": "https://github.com/defhook/pass#readme",
-  "dependencies": {
-    "concurrently": "^7.2.2"
-  }
+
+  
 }

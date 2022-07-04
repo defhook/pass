@@ -12,7 +12,7 @@ function Navigation() {
                 <span role="img" aria-label="ticket">
                   {" "}
                   <img
-                    src={require(`../../assets/main/PASS-logo-copy.png`)}
+                    src={require(`../../assets/main/PASS-logo.png`)}
                     alt="github"
                     className="App-logo"
                   />
@@ -45,10 +45,10 @@ function Navigation() {
               </Form>
             </Col>
             <Col xs="4">
-              <Button  variant="danger m-2 p-2"  type="submit">
+              <Button  variant="danger m-4 p-2 mt-4"  type="submit">
                 Log In
               </Button>
-              <Button variant="success m-2 p-2" type="submit">
+              <Button variant="success m-4 p-2 mt-4" type="submit">
                 Create Account
               </Button>
             </Col>

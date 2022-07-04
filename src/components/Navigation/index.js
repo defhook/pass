@@ -6,7 +6,7 @@ function Navigation() {
     <header>
       <Nav className="navigation">
         <Row className="p-3">
-          <Col xs="2">
+          <Col xs="2 sm">
             <a data-testid="link" href="https://github.com/defhook/pass">
               <span role="img" aria-label="ticket">
                 {" "}
@@ -18,7 +18,7 @@ function Navigation() {
               </span>{" "}
             </a>
           </Col>
-          <Col xs="3">
+          <Col xs="3 sm">
             <Form>
               <Container>
                 <Form.Group controlId="formEmail">
@@ -29,7 +29,7 @@ function Navigation() {
               </Container>
             </Form>
           </Col>
-          <Col xs="3">
+          <Col xs="3 sm">
             <Form>
               <Container>
                 <Form.Group controlId="formPassword">
@@ -40,7 +40,7 @@ function Navigation() {
               </Container>
             </Form>
           </Col>
-          <Col xs="4">
+          <Col xs="4 sm">
             <Button variant="danger m-4 p-2 mt-4" type="submit">
               Log In
             </Button>

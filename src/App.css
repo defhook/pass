@@ -1,15 +1,14 @@
-.App {
-  text-align: center;
-}
+
 
 .App-logo {
-  height: 40vmin;
+  height: 16vmin;
   pointer-events: none;
+  margin-left: 0px; 
 }
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+    animation: App-logo-spin infinite 10s linear;
   }
 }
 
@@ -36,3 +35,63 @@
     transform: rotate(360deg);
   }
 }
+
+.neonText{
+  font-family: 'Pacifico', cursive;
+  animation: flicker 1.5s infinite alternate;
+  color: red;
+  text-align: center;
+  font-size: 5.0rem;
+}
+
+.neonSize {
+ font-size: 9.0rem;
+ animation: flicker 5s infite alternative
+}
+
+.about-me {
+  background-color: #6eaceb; 
+}
+
+#root {
+  background-color: #6eaceb; 
+}
+
+@keyframes flicker {
+  0%, 18%, 22%, 25%, 53%, 57%, 100% {
+    text-shadow:
+    0 0 4px #fff,
+    0 0 11px #fff,
+    0 0 19px #fff,
+    0 0 40px #0fa,
+    0 0 80px #0fa,
+    0 0 90px #0fa,
+    0 0 100px #0fa,
+    0 0 150px #0fa;
+  }
+  20%, 24%, 55% {
+    text-shadow: none;
+  }
+}
+
+.login-btn{
+  background-color: #ce5428; 
+  color: #ffffff;
+}
+
+.navigation {
+  background-color: #4f468a;
+  color: #ce5428; 
+}
+
+.aboutMe{
+  font-family: 'Pacifico', cursive;
+  /* animation: flicker 1.5s infinite alternate; */
+  color: red;
+  text-align: center;
+  font-size: 1.9rem;
+}
+
+
+
+

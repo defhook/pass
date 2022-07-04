@@ -3,7 +3,7 @@ import { Form, Nav, Button, Container, Row, Col } from "react-bootstrap";
 
 function Navigation() {
   return (
-    <header className="flex-row px-1">
+    <header>
       <Nav className="navigation">
         <Row className="p-3">
           <Col xs="2">

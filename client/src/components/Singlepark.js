@@ -49,6 +49,7 @@ function Singlepark () {
         {favData.map((each) => {
             return(
                 <>      
+                
                 <card key={each.attractionId}>
                 <a href={`/single/${each.attractionId}`}><h5>{each.name}</h5></a>
                 <p>{each.type}</p>

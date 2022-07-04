@@ -1,6 +1,7 @@
 import React from "react";
 import { Form, Nav, Button, Container, Row, Col } from "react-bootstrap";
 
+
 function Navigation() {
   return (
     <header>
@@ -18,11 +19,13 @@ function Navigation() {
               </span>{" "}
             </a>
           </Col>
+          
+
           <Col xs="3">
             <Form>
               <Container>
                 <Form.Group controlId="formEmail">
-                  <Form.Label>User Id</Form.Label>
+                  <Form.Label>Email Address</Form.Label>
                   <Form.Control type="email" placeholder="example@email.com" />
                   <Form.Text className="text-muted" />
                 </Form.Group>
@@ -44,23 +47,22 @@ function Navigation() {
             <Button variant="danger m-4 p-2 mt-4" type="submit">
               Log In
             </Button>
-            <Button variant="success m-4 p-2 mt-4" type="submit">
+            <Button href="/user" variant="success m-4 p-2 mt-4" type="submit">
               Create Account
             </Button>
-            <a href={"/home"}>
+            <div className="d-flex justify-content-evenly anchors">
+
+            <a className='text-light' href={"/"}>
               Home
             </a>
 
-            <a href={"/favorites"}>
+            <a className='text-light' href={"/favorites"}>
               Favorites
             </a>
-
-            <a href={"/user"}>
-              User
-            </a>
-            <a href={"/About"}>
+            <a className='text-light' href={"/About"}>
               About
             </a>
+            </div>
           </Col>
         </Row>
       </Nav>

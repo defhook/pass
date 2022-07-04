@@ -1,11 +1,15 @@
-import Searchbar from './components/Searchbar';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-// import { useQuery } from '@apollo/client'
 import { setContext } from '@apollo/client/link/context';
-
 import { ApolloProvider, ApolloClient, InMemoryCache, createHttpLink } from '@apollo/client';
-import logo from './logo.svg';
 import Singlepark from './components/Singlepark'
+import Favorites from "./pages/favorites";
+import User from "./pages/user";
+import HomePage from "./pages/home";
+import Navigation from "./components/Navigation";
+import About from "./components/About";
+// import Footer from "./components/Footer";
+import './App.css'
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const httpLink = createHttpLink({
   uri: '/graphql',
@@ -36,9 +40,13 @@ function App() {
 
     <Router>
     
-      <Searchbar></Searchbar>
+      <Navigation></Navigation>
       <Switch>
-        <Route path="/single/:id" component={Singlepark}  />
+       <Route exact path="/" component={HomePage} />
+       <Route exact path="/favorites" component={Favorites} />
+       <Route exact path="/user" component={User} />
+       <Route exact path="/About" component={About} />
+       <Route path="/single/:id" component={Singlepark}  />
       </Switch>
 
     </Router>

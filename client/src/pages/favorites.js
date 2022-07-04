@@ -1,6 +1,5 @@
 
 import React from "react";
-import ReactDOM from "react-dom";
 
 import styled, { css } from "styled-components";
 
@@ -42,8 +41,8 @@ text-align: center
 		)
  }
 function Favorites() {
-    //replace the contents of the grid with a forloop looping through each fave _name and _hours can be replaced with the correct value
-        return (
+	
+	return (
 		
 				
 				<Grid>
@@ -65,5 +64,5 @@ function unfavorite (name){
   }
 
   
-export default Favorites;
+export default Favorites
 

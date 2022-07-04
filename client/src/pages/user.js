@@ -1,8 +1,11 @@
 
-import React from "react";
+import React, { useState } from "react";
+import { useMutation } from '@apollo/client'
 import { Container, Col, text } from "react-bootstrap";
 import ReactDOM from "react-dom";
 import styled, { css } from "styled-components";
+import { ADD_USER } from '../utils/mutations';
+import Auth from '../utils/auth'
 
 
 import "../custom.css";
@@ -24,72 +27,80 @@ display: grid;
 	grid-template-columns:500px 150px 100px;
   margin: 80px;
 `;
-//global variables that affect current email and password
-var Email = "placeholder"
-var Password = "placeholder"
 
-//this function dynamically adds the user info 
-function Insertuser (props) {
-    return (
-                <Container>
-            <div className="new-line">
-                {props._email}
-                </div>
-            <div className="new-line">
-                {props._password}
-                </div>
-                </Container>  
-      )         
-} 
 //this is the main enchalada for the page yum
 function User() {
-    
-        return (
-            <Container className="blueBackground">
-            <div className ="user-box">
+    const [signupForm, setSignUp] = useState({ email: '', password: '' });
+
+    const [addUser, { error }] = useMutation(ADD_USER)
+
+    const handleInputChange = (event) => {
+        const { name, value } = event.target;
+        setSignUp({ ...signupForm, [name]: value });
+    };
+
+    const createUser = async (event) => {
+        event.preventDefault();
+
+        const form = event.currentTarget;
+        if (form.checkValidity() === false) {
+            event.preventDefault();
+            event.stopPropagation();
+        }
+
+        try {
+            const { newDude } = await addUser({
+                variables: { ...signupForm }
+            });
+
+            Auth.login(newDude.addUser.token);
+        } catch (err) {
+            console.log(err)
+        }
+    }
+
+    return (
+        <Container className="blueBackground">
+            <div className="user-box">
                 <CenteredText>
-                    User Page
+                    Create an Account
                 </CenteredText>
 
-            </div> 
-            <div>
-            <User_grid>
-           
-                <div>
-                <img circle src = {require( "../assets/images/user-photo.png")} alt=""
-				 style={{
-					height: "250px",
-				  }}>
-				</img>
-                </div>
-                <div>
-                <div className="new-line">
-                Email
-                </div>
-                <div className="new-line">
-                Password
-                </div>                
-               
-                <button className="button-color" onClick={Update_Info}>
-                    Change/Update Info
-                </button>
             </div>
-            
-            <Insertuser _email={Email} _password = {Password}>
+            <div>
+                <User_grid>
 
-            </Insertuser>
-             </User_grid>
-             </div>
-           
-            </Container>
-            
-      
-        )
+                    <div>
+                        <img circle src={require("../assets/images/user-photo.png")} alt=""
+                            style={{
+                                height: "250px",
+                            }}>
+                        </img>
+                    </div>
+                    <div>
+                        <div className="new-line">
+                            <input name='email' value={signupForm.email} onChange={handleInputChange} type='text' placeholder="Email Address"></input>
+                        </div>
+                        <div className='new-line'>
+                            <input name='password' value={signupForm.password} onChange={handleInputChange} type='password' placeholder="Password"></input>
+                        </div>
+
+                        <button className="button-color" onClick={createUser}>
+                            Sign Up!
+                        </button>
+                    </div>
+                </User_grid>
+            </div>
+
+        </Container>
+
+
+    )
 
 }
-    function Update_Info (){
-        //this function can be used to update user info
-       console.log ("change info");
-    }
+// function Update_Info (){
+//     //this function can be used to update user info
+//    console.log ("change info");
+// }
 export default User;
 

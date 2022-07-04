@@ -1,5 +1,6 @@
 const { AuthenticationError } = require('apollo-server-express');
 const { signToken } = require('../utils/auth')
+const { User } = require('../models')
 
 const resolvers = {
     Query: {
@@ -13,17 +14,7 @@ const resolvers = {
             }
 
             throw new AuthenticationError('Not logged in');
-        },
-        user: async (parent, { username }) => {
-          return User.findOne({ username })
-            .select('-__v -password')
-            .populate('savedAttractions')
-          },
-        users: async () => {
-          return User.find()
-            .select('-__v -password')
-            .populate('savedAttractions')
-          },
+        }
     },
 
     Mutation: {
@@ -37,7 +28,7 @@ const resolvers = {
         const user = await User.findOne({ email });
       
         if (!user) {
-          throw new AuthenticationError('Incorrect username');
+          throw new AuthenticationError('Incorrect email');
         }
       
         const correctPw = await user.isCorrectPassword(password);

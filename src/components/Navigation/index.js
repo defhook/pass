@@ -47,6 +47,20 @@ function Navigation() {
             <Button variant="success m-4 p-2 mt-4" type="submit">
               Create Account
             </Button>
+            <a href={"/home"}>
+              Home
+            </a>
+
+            <a href={"/favorites"}>
+              Favorites
+            </a>
+
+            <a href={"/user"}>
+              User
+            </a>
+            <a href={"/About"}>
+              About
+            </a>
           </Col>
         </Row>
       </Nav>

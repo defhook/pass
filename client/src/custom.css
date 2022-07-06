@@ -9,13 +9,6 @@
     --purple: #4f468a;
 }
 
-.user-box {
-    background-color: var(--green);
-    border-radius:0%;
-    color: var(--light);
-    margin-top: 20px;
-    font-size: 28px;
-}
 
 .user-image {
     margin: 5%;

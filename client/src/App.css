@@ -111,12 +111,13 @@
 }
 
 .colorLink {
-  font-family: 'Pacifico', cursive;
+  
   text-align: center;
 }
 
 
 .link {
+font-family: 'Pacifico', cursive;
 color: red;
 }
 

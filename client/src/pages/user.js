@@ -62,7 +62,6 @@ function User() {
 
             </div>
             <div>
-                <User_grid>
 
                     <div>
                         <img circle src={require("../assets/images/user-photo.png")} alt=""
@@ -86,7 +85,7 @@ function User() {
                             Sign Up!
                         </button>
                     </div>
-                </User_grid>
+
             </div>
 
         </Container>

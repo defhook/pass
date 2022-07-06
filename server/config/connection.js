@@ -1,8 +1,10 @@
 const mongoose = require('mongoose');
 
-mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/Pass', {
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/pass', {
   useNewUrlParser: true,
-  useUnifiedTopology: true
+  useUnifiedTopology: true,
+  useCreateIndex: true,
+  useFindAndModify: false,
 });
 
 module.exports = mongoose.connection;

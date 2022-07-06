@@ -19,7 +19,8 @@ display: grid;
 
 `;
 export const CenteredText = styled.div`
-text-align: center
+text-align: center;
+
 `;
 export const User_grid = styled.div`
 display: grid;
@@ -61,31 +62,36 @@ function User() {
                 </CenteredText>
 
             </div>
+            
             <div>
 
-                    <div>
+                    <div className='d-flex justify-content-center'>
                         <img circle src={require("../assets/images/user-photo.png")} alt=""
                             style={{
                                 height: "250px",
                             }}>
                         </img>
                     </div>
+                                <div className="container d-flex justify-content-center m-3">
                     <div>
                         <div className="new-line">
-                            <input name='username' value={signupForm.username} onChange={handleInputChange} type='text' placeholder="username"></input>
+                            <input className='form-control' name='username' value={signupForm.username} onChange={handleInputChange} type='text' placeholder="username"></input>
                         </div>
                         <div className="new-line">
-                            <input name='email' value={signupForm.email} onChange={handleInputChange} type='text' placeholder="Email Address"></input>
+                            <input className='form-control' name='email' value={signupForm.email} onChange={handleInputChange} type='text' placeholder="Email Address"></input>
                         </div>
                         <div className='new-line'>
-                            <input name='password' value={signupForm.password} onChange={handleInputChange} type='password' placeholder="Password"></input>
-                        </div>
-
-                        <button className="button-color" onClick={createUser}>
+                        
+                        <input className='form-control' name='password' value={signupForm.password} onChange={handleInputChange} type='password' placeholder="Password"></input>
+                            <br/>
+                        <button type="button" className="btn btn-danger" onClick={createUser}>
                             Sign Up!
                         </button>
+                        </div>
+
                     </div>
 
+                                </div>
             </div>
 
         </Container>

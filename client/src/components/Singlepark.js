@@ -63,6 +63,7 @@ function Singlepark () {
 
     return(
         <>
+        
         <h1 className='maindisp'>{mainName.name}</h1>
        <div className='maindisp container p-2 d-flex flex-wrap justify-content-center'>
         {favData.map((each) => {

@@ -56,8 +56,8 @@ function User() {
 
     return (
         <Container Fluid className="blueBackground">
-            <div className="neonText">
-                <h1>
+            <div className="p-2 mt-3 mb-3 ">
+                <h1 className='neonText fs-3'>
                     Create an Account
                 </h1>
 

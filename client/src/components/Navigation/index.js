@@ -38,7 +38,7 @@ function Navigation() {
   }
   return (
     <header>
-      <Nav className="navigation">
+      <Nav className="navigation p-2">
 
           <div className='d-flex flex-wrap '>
             <a data-testid="link" href="https://github.com/defhook/pass">

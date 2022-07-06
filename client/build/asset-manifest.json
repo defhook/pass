@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/static/css/main.3ca7934e.css",
+    "main.js": "/static/js/main.554cf1d7.js",
+    "static/js/787.7ef191e1.chunk.js": "/static/js/787.7ef191e1.chunk.js",
+    "static/media/user-photo.png": "/static/media/user-photo.9c7a75f16aec5fe56bb9.png",
+    "static/media/PASS-logo.png": "/static/media/PASS-logo.795a2b27b8e092295e8a.png",
+    "static/media/polygonmap.jpg": "/static/media/polygonmap.697112d19215b8e87ca2.jpg",
+    "static/media/red-x-icon.png": "/static/media/red-x-icon.a684a14ca4c3776c7938.png",
+    "index.html": "/index.html",
+    "main.3ca7934e.css.map": "/static/css/main.3ca7934e.css.map",
+    "main.554cf1d7.js.map": "/static/js/main.554cf1d7.js.map",
+    "787.7ef191e1.chunk.js.map": "/static/js/787.7ef191e1.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.3ca7934e.css",
+    "static/js/main.554cf1d7.js"
+  ]
+}

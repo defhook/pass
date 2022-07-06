@@ -40,7 +40,7 @@ function Navigation() {
     <header>
       <Nav className="navigation">
 
-          <div className="d-flex">
+          {/* <div className="d-flex navigation"> */}
             <a data-testid="link" href="https://github.com/defhook/pass">
               <span role="img" aria-label="ticket">
                 {" "}
@@ -101,7 +101,7 @@ function Navigation() {
             )
 
             }
-              </div>
+              {/* </div> */}
             <div className="d-flex justify-content-between anchors">
 
               <a className='p-2 text-light' href={"/"}>

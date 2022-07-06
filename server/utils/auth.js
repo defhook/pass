@@ -28,8 +28,8 @@ authMiddleware: function({ req }) {
         
         return req;
     },
-    signToken: function({ email, _id }) {
-        const payload = { email, _id};
+    signToken: function({ username, email, _id }) {
+        const payload = { username, email, _id};
     
         return jwt.sign({ data: payload }, secret, { expiresIn: expiration })
     },

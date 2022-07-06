@@ -38,6 +38,7 @@
     background-color: var(--blue);
     border-radius: 10%;
     color: var(--light);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 #navbar button {

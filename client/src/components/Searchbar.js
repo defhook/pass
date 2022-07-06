@@ -14,6 +14,8 @@ function Searchbar( ) {
     }, [])
 
     const handleFilter = (event) => {
+
+        event.preventDefault()
         const searchWord = event.target.value;
         setWordEntered(searchWord)
         const newFilter = data.filter((ind) => {
@@ -31,13 +33,13 @@ function Searchbar( ) {
 
     return (
         <>
-            <div className="input-group w-75 p-2">
-                <input type="text" onChange={handleFilter} value={wordEntered} className="searchEng" placeholder="Search by keyword" aria-label="Recipient's username" aria-describedby="button-addon2" />
+            <div className="w-75 p-2">
+                <input type="text" onChange={handleFilter} value={wordEntered} className="form-control" placeholder="Search by keyword" aria-label="Recipient's username" aria-describedby="button-addon2" />
 
             </div>
             {filteredData.length != 0 && (
 
-                <div className="m-3 mt-auto dataResult">
+                <div className="w-75 dataResult">
                 {filteredData.slice(0, 9).map((value) => {
                     return (
                         <a className="dataItem" href={`/single/${value.id}`} _target="blank">

@@ -6,23 +6,23 @@ export const LOGIN_USER = gql`
             token
             user {
                 _id
-                email
+                username
             }
         }
     }
-`
+`;
 
 export const ADD_USER = gql`
-mutation addUser($email: String!, $password: String!) {
-    addUser(email: $email, password: $password) {
+mutation addUser($username: String!, $email: String!, $password: String!) {
+    addUser(username: $username, email: $email, password: $password) {
       token
       user {
         _id
-        email
+        username
       }
     }
   }
-`
+`;
 
 export const SAVE_ATTRACTION = gql`
     mutation saveAttraction($input: AttractionData!) {
@@ -39,10 +39,10 @@ export const SAVE_ATTRACTION = gql`
             }
         }
     }
-`
+`;
 
 export const REMOVE_ATTRACTION = gql`
-    mutation removeAttraction($attractionId: String!) {
+    mutation removeAttraction($attractionId: ID!) {
         removeAttraction(attractionId: $attractionId) {
             _id
             username
@@ -58,5 +58,5 @@ export const REMOVE_ATTRACTION = gql`
             }
         }
     }
-`
+`;
 

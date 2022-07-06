@@ -30,7 +30,7 @@ display: grid;
 
 //this is the main enchalada for the page yum
 function User() {
-    const [signupForm, setSignUp] = useState({ email: '', password: '' });
+    const [signupForm, setSignUp] = useState({username: '', email: '', password: '' });
 
     const [addUser, { error }] = useMutation(ADD_USER)
 
@@ -42,18 +42,12 @@ function User() {
     const createUser = async (event) => {
         event.preventDefault();
 
-        const form = event.currentTarget;
-        if (form.checkValidity() === false) {
-            event.preventDefault();
-            event.stopPropagation();
-        }
-
         try {
-            const { newDude } = await addUser({
+            const { data } = await addUser({
                 variables: { ...signupForm }
             });
 
-            Auth.login(newDude.addUser.token);
+            Auth.login(data.addUser.token);
         } catch (err) {
             console.log(err)
         }
@@ -78,6 +72,9 @@ function User() {
                         </img>
                     </div>
                     <div>
+                        <div className="new-line">
+                            <input name='username' value={signupForm.username} onChange={handleInputChange} type='text' placeholder="username"></input>
+                        </div>
                         <div className="new-line">
                             <input name='email' value={signupForm.email} onChange={handleInputChange} type='text' placeholder="Email Address"></input>
                         </div>

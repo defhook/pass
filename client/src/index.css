@@ -1,20 +1,14 @@
-.searchEng {
-  width: 55%;
-  height: 25px;
-}
-
 .maindisp {
-  display: flex;
-  flex-direction: column;
+  text-align: center
 }
 
 .dataResult {
-  width: 500px;
   height: 200px;
   background-color: white;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   overflow: hidden;
   overflow-y: auto;
+  text-align: left
 }
 
 .dataResult::-webkit-scrollbar {
@@ -34,6 +28,7 @@
 
 .dataItem p {
   margin-left: 10px;
+  text-decoration: none;
 }
 
 a {
@@ -42,6 +37,10 @@ a {
 
 input:focus {
   outline: none;
+}
+
+.clickable {
+    cursor: pointer;
 }
 
 a:hover {

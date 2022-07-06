@@ -65,10 +65,8 @@ function User() {
 
             <div className='d-flex anotherMadeup container justify-content-between flex-wrap'>
 
-                    <img className='mx-auto' circle src={require("../assets/images/user-photo.png")} alt=""
-                        style={{
-                            height: "250px",
-                        }}>
+                    <img className='mx-auto robotGuy' circle src={require("../assets/images/user-photo.png")} alt=""
+                        >
                     </img>
                 
                     <div className="madeupClass w-50">

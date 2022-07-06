@@ -47,6 +47,10 @@ a:hover {
   background-color: grey;
 }
 
+.robotGuy {
+  height: 250px;
+}
+
 @media screen and (max-width: 1200px) {
   .madeupClass {
     flex: 100%;
@@ -67,5 +71,17 @@ a:hover {
     flex: 100%;
     justify-content: center;
     text-align: center;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .robotGuy {
+    height: 200px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .robotGuy {
+    height: 130px;
   }
 }

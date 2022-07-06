@@ -7,6 +7,7 @@ import User from "./pages/user";
 import HomePage from "./pages/home";
 import Navigation from "./components/Navigation";
 import About from "./components/About";
+import Footer from "./components/Footer";
 // import Footer from "./components/Footer";
 import './App.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -48,7 +49,7 @@ function App() {
        <Route exact path="/About" component={About} />
        <Route path="/single/:id" component={Singlepark}  />
       </Switch>
-
+    <Footer></Footer>
     </Router>
       </ApolloProvider>
   );

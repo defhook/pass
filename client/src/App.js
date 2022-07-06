@@ -33,24 +33,24 @@ const client = new ApolloClient({
 
 function App() {
 
-    
+
   return (
 
-      <ApolloProvider client={client}>
+    <ApolloProvider client={client}>
 
-    <Router>
-    
-      <Navigation></Navigation>
-      <Switch>
-       <Route exact path="/" component={HomePage} />
-       <Route exact path="/favorites" component={Favorites} />
-       <Route exact path="/user" component={User} />
-       <Route exact path="/About" component={About} />
-       <Route path="/single/:id" component={Singlepark}  />
-      </Switch>
+      <Router>
 
-    </Router>
-      </ApolloProvider>
+        <Navigation></Navigation>
+        <Switch>
+          <Route exact path="/" component={HomePage} />
+          <Route exact path="/favorites" component={Favorites} />
+          <Route exact path="/user" component={User} />
+          <Route exact path="/About" component={About} />
+          <Route path="/single/:id" component={Singlepark} />
+        </Switch>
+
+      </Router>
+    </ApolloProvider>
   );
 }
 

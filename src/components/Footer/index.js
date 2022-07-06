@@ -5,8 +5,8 @@ function Footer() {
   return (
     <Container Fluid>
       <Row class="contactus">
-        <h3 class="hover">
-          <a href="mailto:anymail@anymail.com">Contact Us!</a>
+        <h3 class="colorLink">
+          <a href="mailto:anymail@anymail.com" className="link">Contact Us!</a>
         </h3>
       </Row>
     </Container>

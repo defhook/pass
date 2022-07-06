@@ -40,7 +40,7 @@ function Navigation() {
     <header>
       <Nav className="navigation">
 
-          {/* <div className="d-flex navigation"> */}
+          <div className='d-flex flex-wrap '>
             <a data-testid="link" href="https://github.com/defhook/pass">
               <span role="img" aria-label="ticket">
                 {" "}
@@ -56,6 +56,7 @@ function Navigation() {
             {Auth.loggedIn() ? (
               null
             ) : (<>
+              
 
               <Form>
                 <Container>
@@ -77,6 +78,8 @@ function Navigation() {
                   </Form.Group>
                 </Container>
               </Form>
+        
+              
 
             </>)
 
@@ -91,25 +94,28 @@ function Navigation() {
 
             ) : (
               <>
+              <div className="ms-3">
+
                 <Button onClick={handleLogin} variant="danger m-4 p-2 mt-4" type="submit">
                   Log In
                 </Button>
                 <Button href="/user" variant="success m-4 p-2 mt-4" type="submit">
                   Create Account
                 </Button>
+              </div>
               </>
             )
 
             }
-              {/* </div> */}
+              </div>
             <div className="d-flex justify-content-between anchors">
 
-              <a className='p-2 text-light' href={"/"}>
+              <a className='p-2 mt-3 text-light' href={"/"}>
                 Home
               </a>
               {Auth.loggedIn() ?
                 (
-                  <a className='p-2 text-light' href={"/favorites"}>
+                  <a className='p-2 mt-3 text-light' href={"/favorites"}>
                     Favorites
                   </a>
 
@@ -117,7 +123,7 @@ function Navigation() {
                   null
                 )
               }
-              <a className='p-2 text-light' href={"/About"}>
+              <a className='p-2 mt-3 text-light' href={"/About"}>
                 About
               </a>
             </div>

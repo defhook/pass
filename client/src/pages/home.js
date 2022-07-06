@@ -6,7 +6,7 @@ function HomePage() {
   return (
     <Container>
       <center className='justify-content-center'>
-        <h1>Welcome to PASS! Your favorite theme park website!</h1>
+        <h1 className='text-light'>Welcome to PASS! Your favorite theme park website!</h1>
       <Searchbar></Searchbar>
       </center>
 

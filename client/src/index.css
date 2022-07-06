@@ -26,7 +26,7 @@
   background-color: lightgrey;
 }
 
-.dataItem p {
+.dataItem a {
   margin-left: 10px;
   text-decoration: none;
 }
@@ -47,3 +47,25 @@ a:hover {
   background-color: grey;
 }
 
+@media screen and (max-width: 1200px) {
+  .madeupClass {
+    flex: 100%;
+    justify-content: center;
+    text-align: center;
+  }  
+
+  .pic {
+    flex: 0 32%;
+    margin-right: 0;
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .madeupClass {
+    flex: 100%;
+    justify-content: center;
+    text-align: center;
+  }
+}

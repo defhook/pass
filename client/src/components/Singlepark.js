@@ -68,7 +68,7 @@ function Singlepark () {
         {favData.map((each) => {
             return(
                 <>      
-                <form className='color-box p-2 m-2' key={each.attractionId}>
+                <form className='color-box bg-gradient p-2 m-2' key={each.attractionId}>
                 <a className='text-light' href={`/single/${each.attractionId}`}><h5>{each.name}</h5></a>
                 <p>{each.type}</p>
                 <p>Status: {each.status}</p>

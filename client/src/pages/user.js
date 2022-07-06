@@ -31,7 +31,7 @@ display: grid;
 
 //this is the main enchalada for the page yum
 function User() {
-    const [signupForm, setSignUp] = useState({username: '', email: '', password: '' });
+    const [signupForm, setSignUp] = useState({ username: '', email: '', password: '' });
 
     const [addUser, { error }] = useMutation(ADD_USER)
 
@@ -55,25 +55,24 @@ function User() {
     }
 
     return (
-        <Container className="blueBackground">
-            <div className="user-box">
-                <CenteredText>
+        <Container Fluid className="blueBackground">
+            <div className="neonText">
+                <h1>
                     Create an Account
-                </CenteredText>
+                </h1>
 
             </div>
-            
-            <div>
 
-                    <div className='d-flex justify-content-center'>
-                        <img circle src={require("../assets/images/user-photo.png")} alt=""
-                            style={{
-                                height: "250px",
-                            }}>
-                        </img>
-                    </div>
-                                <div className="container d-flex justify-content-center m-3">
-                    <div>
+            <div className='d-flex anotherMadeup container justify-content-between flex-wrap'>
+
+                    <img className='mx-auto' circle src={require("../assets/images/user-photo.png")} alt=""
+                        style={{
+                            height: "250px",
+                        }}>
+                    </img>
+                
+                    <div className="madeupClass w-50">
+
                         <div className="new-line">
                             <input className='form-control' name='username' value={signupForm.username} onChange={handleInputChange} type='text' placeholder="username"></input>
                         </div>
@@ -81,17 +80,18 @@ function User() {
                             <input className='form-control' name='email' value={signupForm.email} onChange={handleInputChange} type='text' placeholder="Email Address"></input>
                         </div>
                         <div className='new-line'>
-                        
-                        <input className='form-control' name='password' value={signupForm.password} onChange={handleInputChange} type='password' placeholder="Password"></input>
-                            <br/>
-                        <button type="button" className="btn btn-danger" onClick={createUser}>
-                            Sign Up!
-                        </button>
-                        </div>
 
+                            <input className='form-control' name='password' value={signupForm.password} onChange={handleInputChange} type='password' placeholder="Password"></input>
+                            <br />
+                            <button type="button" className="btn btn-danger" onClick={createUser}>
+                                Sign Up!
+                            </button>
+                        </div>
                     </div>
 
-                                </div>
+                    
+
+                
             </div>
 
         </Container>

@@ -56,7 +56,7 @@ function Favorites() {
             return(
                 <>      
                 
-                <form className='color-box p-2 m-2' key={each.attractionId}>
+                <form className='color-box bg-gradient p-2 m-2' key={each.attractionId}>
                 <img className="clickable" onClick={() => handleDelete(each.attractionId)} src = {require( "../assets/images/red-x-icon.png")} alt=""
 				 style={{
 					height: "25px"

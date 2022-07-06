@@ -110,6 +110,19 @@
   font-size: 1.9rem;
 }
 
+.colorLink {
+  font-family: 'Pacifico', cursive;
+  text-align: center;
+}
+
+
+.link {
+color: red;
+}
+
+.link:hover {
+  color: #0fa;
+
 /*@import "../node_modules/bootstrap/scss/bootstrap.scss";
 */
 :root {

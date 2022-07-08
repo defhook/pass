@@ -11,7 +11,11 @@
   text-align: center;
 }
 
-
+.tarjeta {
+  max-width: 250px;
+  background-color: #4f468a;
+  border-radius: 10px;
+}
 
 .App-logo {
   height: 16vmin;
@@ -21,6 +25,14 @@
 
 .anchors {
   color: white;
+}
+
+.closed {
+  color: rgb(236, 152, 106);
+}
+
+.open {
+  color: greenyellow
 }
 
 @media (prefers-reduced-motion: no-preference) {

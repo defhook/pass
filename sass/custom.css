@@ -9,6 +9,10 @@
     --purple: #4f468a;
 }
 
+.closed {
+    color: var(--red);
+}
+
 .user-box {
     background-color: var(--blue);
     border-radius:0%;

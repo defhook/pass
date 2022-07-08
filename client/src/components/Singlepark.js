@@ -64,25 +64,25 @@ function Singlepark () {
     return(
         <>
         
-        <h1 className='maindisp'>{mainName.name}</h1>
-       <div className='maindisp container p-2 d-flex flex-wrap justify-content-center'>
+        <h1 className='neonText fs-1 mt-3 mb-3'>{mainName.name}</h1>
+       <div className='maindisp p-2 d-flex flex-wrap justify-content-center'>
         {favData.map((each) => {
             return(
                 <>      
-                <form className='color-box bg-gradient p-2 m-2' key={each.attractionId}>
-                <a className='text-light' href={`/single/${each.attractionId}`}><h5>{each.name}</h5></a>
-                <p>{each.type}</p>
-                <p>Status: {each.status}</p>
-                {each.waitTime ? <p>Estimated wait time: {each.waitTime || 0 } min</p> : <p>No wait time reported.</p> }
+                <div className='bg-gradient tarjeta mb-3 m-3' key={each.attractionId}>
+                {each.status === "OPERATING" ? <div className='card-header open'>{each.status}</div> : <div className='card-header closed'>{each.status}</div>} 
+                {favData.length > 1 ? <a className='text-light' href={`/single/${each.attractionId}`}><h5>{each.name}</h5></a> : null }
+                <p className='text-light'>{each.type}</p>
+                {each.waitTime ? <p className='text-light p-2'>Estimated wait time: {each.waitTime || 0 } min</p> : <p className='p-2 text-light'>No wait time reported.</p> }
                 {Auth.loggedIn() && (
-                <Button className='btn btn-primary' onClick={() => handleSaveRide(each.attractionId)}
+                <Button className='btn mb-3 navigation' onClick={() => handleSaveRide(each.attractionId)}
                 disabled={savedParkIds?.some((savedParkId) => savedParkId === each.attractionId)}
                 > {savedParkIds?.some((savedParkId) => savedParkId === each.attractionId)
                     ? `Saved` : `Save`}</Button>
                 
                 ) }
-                </form>
-                <br/>
+                </div>
+                
                 </>
             )   
         })}

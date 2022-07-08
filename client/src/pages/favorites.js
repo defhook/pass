@@ -56,16 +56,16 @@ function Favorites() {
             return(
                 <>      
                 
-                <form className='color-box bg-gradient p-2 m-2' key={each.attractionId}>
-                <img className="clickable" onClick={() => handleDelete(each.attractionId)} src = {require( "../assets/images/red-x-icon.png")} alt=""
+                <div className='navigation tarjeta bg-gradient mb-3 m-3' key={each.attractionId}>
+                <div className='card-header d-flex justify-content-end'><img className="clickable" onClick={() => handleDelete(each.attractionId)} src = {require( "../assets/images/red-x-icon.png")} alt=""
 				 style={{
 					height: "25px"
 
 				  }}>
-				</img>
+				</img></div>
                 <a className='text-light' href={`/single/${each.attractionId}`}><h5>{each.name}</h5></a>
-                <p>{each.type}</p>
-                </form>              
+                <p className="text-light">{each.type}</p>
+                </div>              
                 <br/>
                 </>
             )   
